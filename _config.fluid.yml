@@ -105,7 +105,7 @@ theme: fluid  # 指定主题
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git 
-  repo: https://github.com/qlhhahaha/qlhhahaha.github.io.git 
+  repo: git@github.com:qlhhahaha/qlhhahaha.github.io.git
   branch: master 
   message: 
 
