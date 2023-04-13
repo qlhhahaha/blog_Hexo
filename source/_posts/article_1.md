@@ -4,7 +4,7 @@ date: 2023-04-13
 tags: [bug, 算法, leetcode]
 ---
 
-# fuckyou： 
+# fuckyou2： 
 今天刷leetcode时遇到个死活也想不通的bug
 
 原题很简单，线性数组插值问题，暴力遍历和二分法都可以做
