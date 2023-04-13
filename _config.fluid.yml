@@ -109,6 +109,8 @@ deploy:
   branch: master 
   message: 
 
+favicon: /img/favicon.jpg
+
 
 banner_img: /img/background.jpg # 对应存放在 /source/img/bg/example.jpg
 banner_img_height: 90
@@ -118,17 +120,12 @@ navbar:
   blog_title: 钱力晖的小站
   menu:
     - { key: '首页', link: '/', icon: 'iconfont icon-home-fill' }
+    - { key: '归档', link: '/archives/', icon: 'iconfont icon-archive-fill' }
+    - { key: '分类', link: '/categories/', icon: 'iconfont icon-category-fill' }
     - { key: '标签', link: '/tags/', icon: 'iconfont icon-tags-fill' }
-    - { key: '关于', link: '/about/', icon: 'iconfont icon-user-fill'}
-    - {
-        key: '文档',
-        icon: 'iconfont icon-books',
-        submenu: [
-          { key: '主题博客', link: 'https://hexo.fluid-dev.com/' },
-          { key: '配置指南', link: 'https://hexo.fluid-dev.com/docs/guide/' },
-          { key: '图标用法', link: 'https://hexo.fluid-dev.com/docs/icon/' }
-        ]
-    }
+    - { key: "留言板", link: "/remark/", icon: 'iconfont icon-cliplist' }
+    - { key: "友情链接", link: "/links/", icon: "iconfont icon-link-fill" }
+    - { key: '关于', link: '/about/', icon: 'iconfont icon-user-fill' }
 
 web_analytics:  # 网页访问统计
   enable: true # 默认为false，启用网页统计改为true即可
