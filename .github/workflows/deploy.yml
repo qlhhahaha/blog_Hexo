@@ -16,11 +16,11 @@ env:
 jobs:
   build:
     name: Build on node ${{ matrix.node_version }} and ${{ matrix.os }}
-    runs-on: window-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: [window-latest]
-        node_version: [18.x]
+        os: [ubuntu-latest]
+        node_version: [12.x]
 
     steps:
       - name: Checkout
