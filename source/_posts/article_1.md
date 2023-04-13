@@ -9,7 +9,7 @@ tags: [bug, 算法, leetcode]
 
 原题很简单，线性数组插值问题，暴力遍历和二分法都可以做
 
- ![Alt](https://s2.loli.net/2023/04/13/ifSOReA2dapUFsh.png)
+ ![](https://s2.loli.net/2023/04/13/ifSOReA2dapUFsh.png)
 不假思索用区间左闭右开的二分法，三下五除二就整了出来，胸有成竹😋
 
 ```c
@@ -35,6 +35,8 @@ public:
 
 ---
 
+
+
 # 原因分析：
 
 原以为是区间边界条件设置不当，反复检查，手动演算，脑袋想破了也觉得没问题。。
@@ -47,15 +49,15 @@ int middle = left + (right - left) >> 1;
 
 突然虎躯一震，意识到可能是运算符优先级一问题，速google之，果然！
 
-![Alt](https://s2.loli.net/2023/04/13/ildhp5643oy9vXw.png)
+![](https://s2.loli.net/2023/04/13/ildhp5643oy9vXw.png)
 
 ***原来加减符的优先级是要高于位运算符的！***
 一验证发现也的确如此
-![Alt](https://s2.loli.net/2023/04/13/r8KHytNjmulQXIv.png)
+![](https://s2.loli.net/2023/04/13/r8KHytNjmulQXIv.png)
 
 
 
-<img src="https://s2.loli.net/2023/04/13/KAjqC3TBVaHz6yn.jpg" alt="在这里插入图片描述" style="zoom:150%;" />
+![](https://s2.loli.net/2023/04/13/pCmWrFxzQE8AY1T.png)
 
 
 ---
@@ -67,7 +69,7 @@ int middle = left +( (right - left) >> 1);
 ```
 问题解决，顺利通关！
 
-![Alt](https://s2.loli.net/2023/04/13/F43VoBR2bUnkCjs.png)
+![](https://s2.loli.net/2023/04/13/F43VoBR2bUnkCjs.png)
 
 ---
 
