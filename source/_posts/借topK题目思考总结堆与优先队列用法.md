@@ -3,10 +3,12 @@ title: 借top K题目思考总结堆（heap）与优先队列（priority_queque�
 date: 2023-04-13
 tags: [c++, 算法, leetcode]
 categories: 自己事情靠自己
+
 ---
 
 
 # 一、前言
+
 今天做了传说中的top K ，即“**用大顶堆/小顶堆对数据进行排序**”的经典题目
 
 ![](https://s2.loli.net/2023/04/13/ayuA9B7DGbOni2p.png)
@@ -22,15 +24,20 @@ categories: 自己事情靠自己
 
 
 # 二、堆（heap）的原理和用法（下述所有例子默认用小顶堆）
+
 ###  1.定义
+
 （1） 堆是一种具有特殊排序关系的完全二叉树，也就是说，堆首先得具有完全二叉树的所有特性
 （2） 特殊排序关系指——以小顶堆为例——**每个节点的value都小于其两个子节点** ；大顶堆反之
 
 下图就是一个典型的小顶堆
 
 ![](https://s2.loli.net/2023/04/13/LYr9ecyzTOpSwCM.png)
+
 ### 3.堆的建立（push）
+
 对于一个已经建好的堆，push新元素的方法是：
+
 1. **插入**：将该元素插入到heap的尾部
 2. **比较**：然后不断“上浮”，直至满足堆的条件。所谓“上浮”，就是将该元素与其父节点进行比较，比父节点小则上浮一层，否则不动，一直操作直至上浮不动。
 
@@ -41,7 +48,9 @@ categories: 自己事情靠自己
 
 
 ### 2.堆的删除（pop）
+
 三步走：
+
 1. **弹出**：将堆顶元素（即最小的那个元素）直接pop
 2. **提上**：将heap的最后一个元素提到堆顶
 3. **下沉**：将提上的这个堆顶元素不断与其子节点比较，大于子节点就下沉一层，直至全满足定义
@@ -52,8 +61,11 @@ categories: 自己事情靠自己
 ---
 
 # 三、优先队列（priority_queue）的使用
+
 ### 1.定义
+
 我们可以用c++ stl中的priority_queue容器来实现heap的操作，其定义如下
+
 ```cpp
 template<
     class T,
@@ -61,11 +73,13 @@ template<
     class Compare = std::less<typename Container::value_type>
 > class priority_queue;
 ```
+
 T是指堆中元素的**数据类型**；
 container指用于存储这些元素的**底层容器类型**（**默认用vector**，一般也不用改）；
 compare是元素之间的**比较方式**，用于决定建立的是大顶堆or小顶堆，默认用less函数建立大顶堆（当然，你也可以自定义compare方法来建立一些奇奇怪怪的堆。。）
 
 ### 2.常用方法
+
 和普通队列一样，常用的就pop()、push()、top()、empty()
 
 ### 3.代码示例
@@ -119,6 +133,7 @@ int main() {
 ---
 
 # 四、题解
+
 回到开头那道topK力扣题，答案如下
 
 ```cpp
@@ -166,18 +181,27 @@ public:
 ```
 
 做一些解释说明：
+
 1. 首先注意，我们要**找出前K大的元素，那要用的是小顶堆**，因为小顶堆才能把小元素排出去，剩下的就是前K大元素嘛
+
 2. map中的单个元素的数据类型是pair<Type, Type>
+
 3. 关于compare方法的理解：默认的**less方法建立的是大顶堆**，要**建立小顶堆则改用greater\<T>**
 
-	然后所谓的less方法，是将第一个实参（称之为左实参）与第二个实参（称之为右实参）进行比较，return left<right——那么左实参更小时则为true，为true则交换；greater方法反之，return left>right；
-	
-	在上述代码的自定义方法mycomparison中也可以说明这一点，它使用的是return left>right,即greater方法，即建立小顶堆
+   然后所谓的less方法，是将第一个实参（称之为左实参）与第二个实参（称之为右实参）进行比较，return left<right——那么左实参更小时则为true，为true则交换；greater方法反之，return left>right；
+
+   在上述代码的自定义方法mycomparison中也可以说明这一点，它使用的是return left>right,即greater方法，即建立小顶堆
+
 > 总结：
 > 建立大顶堆 = less方法 = return left < right
 > 建立小顶堆 = greater方法 = return left > right
 
 
 
-$\color{Red}TO-DO:$
+```markdown
+{% note success %}
+TO-DO：
 上述第三条纯属自己理解，这么死记用来做题应用没啥问题，但还是得挑个良辰吉日去翻翻源码才行捏😣
+{% endnote %}
+```
+
