@@ -104,10 +104,10 @@ theme: fluid  # 指定主题
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git 
-  repo: git@github.com:qlhhahaha/qlhhahaha.github.io.git
-  branch: master 
-  message: 
+    type: git 
+    repo: git@github.com:qlhhahaha/qlhhahaha.github.io.git
+    branch: master 
+    message: 
 
 favicon: /img/favicon.jpg
 
@@ -117,61 +117,61 @@ banner_img_height: 90
 banner_mask_alpha: 0.8
 
 navbar:
-  blog_title: 钱力晖的小站
-  menu:
-    - { key: '首页', link: '/', icon: 'iconfont icon-home-fill' }
-    - { key: '归档', link: '/archives/', icon: 'iconfont icon-archive-fill' }
-    - { key: '分类', link: '/categories/', icon: 'iconfont icon-category-fill' }
-    - { key: '标签', link: '/tags/', icon: 'iconfont icon-tags-fill' }
-    - { key: "留言板", link: "/remark/", icon: 'iconfont icon-cliplist' }
-    - { key: "友情链接", link: "/links/", icon: "iconfont icon-link-fill" }
-    - { key: '关于', link: '/about/', icon: 'iconfont icon-user-fill' }
+    blog_title: 钱力晖的小站
+    menu:
+        - { key: '首页', link: '/', icon: 'iconfont icon-home-fill' }
+        - { key: '归档', link: '/archives/', icon: 'iconfont icon-archive-fill' }
+        - { key: '分类', link: '/categories/', icon: 'iconfont icon-category-fill' }
+        - { key: '标签', link: '/tags/', icon: 'iconfont icon-tags-fill' }
+        - { key: "留言板", link: "/remark/", icon: 'iconfont icon-cliplist' }
+        - { key: "友情链接", link: "/links/", icon: "iconfont icon-link-fill" }
+        - { key: '关于', link: '/about/', icon: 'iconfont icon-user-fill' }
 
 web_analytics:  # 网页访问统计
-  enable: true # 默认为false，启用网页统计改为true即可
-  leancloud:  # LeanCloud 计数统计，可用于 PV UV 展示，如果 web_analytics.enable 没有开启，PV UV 展示只会查询，不会增加
-    app_id: kycRyikhVWmN4EpKW0iOTt4g-gzGzoHsz
-    app_key: OZMV9Hx4pERwu1aLb0BkeQDH
-    server_url: https://kycryikh.lc-cn-n1-shared.com # REST API 服务器地址，国际版不填
+    enable: true # 默认为false，启用网页统计改为true即可
+    leancloud:  # LeanCloud 计数统计，可用于 PV UV 展示，如果 web_analytics.enable 没有开启，PV UV 展示只会查询，不会增加
+        app_id: kycRyikhVWmN4EpKW0iOTt4g-gzGzoHsz
+        app_key: OZMV9Hx4pERwu1aLb0BkeQDH
+        server_url: https://kycryikh.lc-cn-n1-shared.com # REST API 服务器地址，国际版不填
 
 
 #首页语 打字机特效
 index:
-  slogan:
-    enable: true
-    text: '如果再也见不到你，那么早安、午安、晚安'
+    slogan:
+        enable: true
+        text: '如果再也见不到你，那么早安、午安、晚安'
     api:
-      enable: false
-      url: "https://v1.hitokoto.cn/"
-      method: "GET"
-      headers: {}
-      keys: ["hitokoto"]
+        enable: false
+        url: "https://v1.hitokoto.cn/"
+        method: "GET"
+        headers: {}
+        keys: ["hitokoto"]
 
 
 #关于页
 about:
-  avatar: /img/avatar.jpg
-  name: "钱力晖"
-  intro: "很高兴认识你！"
+    avatar: /img/avatar.jpg
+    name: "钱力晖"
+    intro: "很高兴认识你！"
 
-  icons:
-    - { class: 'iconfont icon-github-fill', link: 'https://github.com/qlhhahaha', tip: 'GitHub' }
-    - { class: 'iconfont icon-zhihu-fill', link: 'https://www.zhihu.com/people/hui-nai-zui', tip: '知乎' }
-    - { class: 'iconfont icon-wechat-fill', qrcode: '/img/wechat.jpg' }
+    icons:
+        - { class: 'iconfont icon-github-fill', link: 'https://github.com/qlhhahaha', tip: 'GitHub' }
+        - { class: 'iconfont icon-zhihu-fill', link: 'https://www.zhihu.com/people/hui-nai-zui', tip: '知乎' }
+        - { class: 'iconfont icon-wechat-fill', qrcode: '/img/wechat.jpg' }
 
 
 footer:
-  statistics:
-    enable: true
+    statistics:
+        enable: true
 
-    # 统计数据来源，使用 leancloud 需要设置 `web_analytics: leancloud` 中的参数；使用 busuanzi 不需要额外设置，但是有时不稳定，另外本地运行时 busuanzi 显示统计数据很大属于正常现象，部署后会正常
-    # Data source. If use leancloud, you need to set the parameter in `web_analytics: leancloud`
-    # Options: busuanzi | leancloud
-    source: "leancloud"
-    # 页面显示的文本，{}是数字的占位符（必须包含），下同
-    # Displayed text, {} is a placeholder for numbers (must be included), the same below
-    pv_format: "总访问 {} 次"
-    uv_format: "总访客 {} 人"
+        # 统计数据来源，使用 leancloud 需要设置 `web_analytics: leancloud` 中的参数；使用 busuanzi 不需要额外设置，但是有时不稳定，另外本地运行时 busuanzi 显示统计数据很大属于正常现象，部署后会正常
+        # Data source. If use leancloud, you need to set the parameter in `web_analytics: leancloud`
+        # Options: busuanzi | leancloud
+        source: "leancloud"
+        # 页面显示的文本，{}是数字的占位符（必须包含），下同
+        # Displayed text, {} is a placeholder for numbers (must be included), the same below
+        pv_format: "总访问 {} 次"
+        uv_format: "总访客 {} 人"
 
 
 
@@ -180,43 +180,43 @@ footer:
 # Based on LeanCloud
 # See: https://valine.js.org/
 valine:
-  appId: kycRyikhVWmN4EpKW0iOTt4g-gzGzoHsz
-  appKey: OZMV9Hx4pERwu1aLb0BkeQDH
-  path: window.location.pathname
-  placeholder:
-  avatar: 'monsterid'
-  meta: ['nick', 'mail', 'link']
-  requiredFields: []
-  pageSize: 10
-  lang: 'zh-CN'
-  highlight: false
-  recordIP: false
-  serverURLs: ''
-  emojiCDN:
-  emojiMaps:
-  enableQQ: false
+    appId: kycRyikhVWmN4EpKW0iOTt4g-gzGzoHsz
+    appKey: OZMV9Hx4pERwu1aLb0BkeQDH
+    path: window.location.pathname
+    placeholder:
+    avatar: 'monsterid'
+    meta: ['nick', 'mail', 'link']
+    requiredFields: []
+    pageSize: 10
+    lang: 'zh-CN'
+    highlight: false
+    recordIP: false
+    serverURLs: ''
+    emojiCDN:
+    emojiMaps:
+    enableQQ: false
 
 post:
-  math:
-    enable: true
-    specific: false
-    engine: mathjax
+    math:
+        enable: true
+        specific: false
+        engine: mathjax
 
     # 浏览量计数
     # Number of visits
     views:
-    enable: true
-    # 统计数据来源
-    # Data Source
-    # Options: busuanzi | leancloud
-    source: "leancloud"
-    format: "{} 次"
+        enable: true
+        # 统计数据来源
+        # Data Source
+        # Options: busuanzi | leancloud
+        source: "leancloud"
+        format: "{} 次"
 
     # 评论插件
     # Comment plugin
     comments:
-    enable: true
-    # 指定的插件，需要同时设置对应插件的必要参数
-    # The specified plugin needs to set the necessary parameters at the same time
-    # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus
-    type: valine
+        enable: true
+        # 指定的插件，需要同时设置对应插件的必要参数
+        # The specified plugin needs to set the necessary parameters at the same time
+        # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus
+        type: valine
