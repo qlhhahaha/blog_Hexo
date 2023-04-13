@@ -1,0 +1,167 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 钱力晖的小站
+subtitle: ''
+description: '欢迎你来玩儿！'
+keywords:
+author: qlhhahaha
+language: zh-CN  # 指定语言，会影响主题显示的语言，按需修改
+timezone: ''
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://qlhhahaha.github.io/
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: fluid  # 指定主题
+
+
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: git 
+  repo: https://github.com/qlhhahaha/qlhhahaha.github.io.git 
+  branch: master 
+  message: 
+
+
+banner_img: /img/background/example.jpg   # 对应存放在 /source/img/bg/example.jpg
+
+navbar:
+  menu:
+    - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
+    - { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
+    - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill', name: '联系我' }
+    - {
+        key: '文档',
+        icon: 'iconfont icon-books',
+        submenu: [
+          { key: '主题博客', link: 'https://hexo.fluid-dev.com/' },
+          { key: '配置指南', link: 'https://hexo.fluid-dev.com/docs/guide/' },
+          { key: '图标用法', link: 'https://hexo.fluid-dev.com/docs/icon/' }
+        ]
+    }
+
+web_analytics:  # 网页访问统计
+  enable: false # 默认为false，启用网页统计改为true即可
+  baidu:  # 百度统计的Key，参见 https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376 代码获取中 hm.js? 后边的字符串
+  google:  # Google统计的Tracking ID，参见 https://analytics.google.com/analytics/web/
+  tencent:  # 腾讯统计的H5 App id，参见 https://mta.qq.com/h5/manage/ctr_app_manage (开启高级功能才有cid)
+    sid:
+    cid:
+  woyaola:  # 51.la站点统计ID，参见 https://www.51.la/user/site/index
+  cnzz:  # 友盟/cnzz站点统计web_id，参见 https://web.umeng.com/main.php?c=site&a=show
+  leancloud:  # LeanCloud 计数统计，可用于 PV UV 展示，如果 web_analytics.enable 没有开启，PV UV 展示只会查询，不会增加
+    app_id:
+    app_key:
+    server_url:  # REST API 服务器地址，国际版不填
+
+
+#首页语 打字机特效
+index:
+  slogan:
+    enable: true
+    text: '如果再也见不到你，那么早安、午安、晚安'
+    api:
+      enable: false
+      url: "https://v1.hitokoto.cn/"
+      method: "GET"
+      headers: {}
+      keys: ["hitokoto"]
+
+
+#关于页
+about:
+  avatar: /img/avatar.jpg
+  name: "钱力晖"
+  intro: "很高兴认识你！"
+
+  icons:
+    - { class: 'iconfont icon-github-fill', link: 'https://github.com/qlhhahaha', tip: 'GitHub' }
+    - { class: 'iconfont icon-zhihu-fill', link: 'https://www.zhihu.com/people/hui-nai-zui', tip: '知乎' }
+    - { class: 'iconfont icon-wechat-fill', qrcode: '/img/wechat.jpg' }
