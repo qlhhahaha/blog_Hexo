@@ -10,7 +10,7 @@ env:
   GIT_EMAIL: 1157577993@qq.com
   THEME_REPO: fluid-dev/hexo-theme-fluid
   THEME_BRANCH: master
-  DEPLOY_REPO: qlhhahaha.github.io
+  DEPLOY_REPO: qlhhahaha/qlhhahaha.github.io
   DEPLOY_BRANCH: master
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest]
-        node_version: [12.x]
+        node_version: [18.x]
 
     steps:
       - name: Checkout
