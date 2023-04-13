@@ -1,41 +1,48 @@
-name: Hexo Deploy
-
+name: GitHub Actions Build and Deploy
 on:
   push:
     branches:
+
       - master
 
 jobs:
-  build:
-    runs-on: windows-10
-    if: github.event.repository.owner.id == github.event.sender.id
-
+  build-and-deploy:
+    runs-on: window-latest
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v2
-        with:
-          ref: master
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '18'
+    - name: 1. git checkout...
 
-      - name: Setup Hexo
-        env:
-          ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_PRI }}
-        run: |
-          mkdir -p ~/.ssh/
-          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
-          chmod 700 ~/.ssh
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.email "1157577993@qq.com"
-          git config --global user.name "qlhhahaha"
-          npm install hexo-cli -g
-          npm install
+      uses: actions/checkout@v1
 
-      - name: Deploy
-        run: |
-          hexo clean
-          hexo deploy
+    - name: 2. setup nodejs...
+
+      uses: actions/setup-node@v1
+
+    - name: 3. install hexo...
+
+      run: |
+        npm install hexo-cli -g
+        npm i -S hexo-prism-plugin -g
+        npm install hexo-generator-search --save -g
+        npm i hexo-permalink-pinyin  -g
+        npm i --save hexo-wordcount -g
+        npm install hexo-filter-github-emojis  -g
+        npm install hexo-generator-feed  -g
+        npm install
+
+    - name: 4. hexo generate public files...
+
+      run: |
+        hexo clean
+        hexo g
+    
+    # 提交到我们的存放静态资源的仓库
+
+    - name: Build and Deploy
+
+      uses: qlhhahaha/blog_Hexo@master
+      env:
+        PERSONAL_TOKEN: ${{ secrets.HEXO_DEPLOY_PRI }}
+        PUBLISH_REPOSITORY: qlhhahaha/qlhhahaha.github.io # The repository the action should deploy to.
+        BRANCH: master  # The branch the action should deploy to.
+        PUBLISH_DIR: ./public # The folder the action should deploy.
