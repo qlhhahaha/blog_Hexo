@@ -113,6 +113,7 @@ deploy:
 banner_img: /img/background/example.jpg   # 对应存放在 /source/img/bg/example.jpg
 
 navbar:
+  blog_title: 钱力晖的小站
   menu:
     - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
     - { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
