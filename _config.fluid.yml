@@ -145,7 +145,7 @@ index:
         method: "GET"
         headers: {}
         keys: ["hitokoto"]
-    banner_img: https://smms.app/image/PZzfdpVG8gKBeJk
+    banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg
     banner_img_height: 100
     banner_mask_alpha: 0.5
 
@@ -218,7 +218,7 @@ waline:
     emoji: [https://unpkg.com/@waline/emojis@1.1.0/tieba]
 
 post:
-    banner_img: https://smms.app/image/PZzfdpVG8gKBeJk
+    banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg
     math:
         enable: true
         specific: false
@@ -244,4 +244,4 @@ post:
         type: waline
     
 message:
-    banner_img: https://smms.app/image/PZzfdpVG8gKBeJk
+    banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg
