@@ -122,7 +122,7 @@ navbar:
         - { key: '归档', link: '/archives/', icon: 'iconfont icon-archive-fill' }
         - { key: '分类', link: '/categories/', icon: 'iconfont icon-category-fill' }
         - { key: '标签', link: '/tags/', icon: 'iconfont icon-tags-fill' }
-        - { key: "留言板", link: "/remark/", icon: 'iconfont icon-cliplist' }
+        - { key: "留言板", link: "/message/", icon: 'iconfont icon-cliplist' }
         - { key: "友情链接", link: "/links/", icon: "iconfont icon-link-fill" }
         - { key: '关于', link: '/about/', icon: 'iconfont icon-user-fill' }
 
@@ -134,7 +134,7 @@ web_analytics:  # 网页访问统计
         server_url: https://kycryikh.lc-cn-n1-shared.com # REST API 服务器地址，国际版不填
 
 
-#首页语 打字机特效
+#首页
 index:
     slogan:
         enable: true
@@ -145,9 +145,9 @@ index:
         method: "GET"
         headers: {}
         keys: ["hitokoto"]
-    banner_img: /img/background.jpg # 对应存放在 /source/img/bg/example.jpg
-    banner_img_height: 90
-    banner_mask_alpha: 0.8
+    banner_img: https://smms.app/image/PZzfdpVG8gKBeJk
+    banner_img_height: 100
+    banner_mask_alpha: 0.5
 
 
 #关于页
@@ -204,7 +204,8 @@ valine:
 # See: https://waline.js.org/
 waline:
     serverURL: 'https://waline-test-woad-six.vercel.app/'
-    placeholder: 你想对钱力晖说什么捏?(填qq邮箱可自动拉取头像，不登录也可以评论，支持表情包和markdown语法)
+    #placeholder: '你想对钱力晖说什么捏?(填qq邮箱可自动拉取头像，不登录也可以评论，支持表情包和markdown语法)'
+    placeholder: '你想对钱力晖说什么捏?'
     path: window.location.pathname
     avatar: retro
     meta: ['nick', 'mail', 'link']
@@ -217,6 +218,7 @@ waline:
     emoji: [https://unpkg.com/@waline/emojis@1.1.0/tieba]
 
 post:
+    banner_img: https://smms.app/image/PZzfdpVG8gKBeJk
     math:
         enable: true
         specific: false
@@ -241,3 +243,5 @@ post:
         # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis
         type: waline
     
+message:
+    banner_img: https://smms.app/image/PZzfdpVG8gKBeJk
