@@ -198,10 +198,9 @@ public:
 
 
 
-```markdown
-{% note success %}
+
+{% note warning %}
 TO-DO：
 上述第三条纯属自己理解，这么死记用来做题应用没啥问题，但还是得挑个良辰吉日去翻翻源码才行捏😣
 {% endnote %}
-```
 

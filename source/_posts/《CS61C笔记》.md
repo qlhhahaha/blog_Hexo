@@ -10,7 +10,7 @@ categories: 核心科技看美帝
 {% note success%}
 课程来源：UCB-CS61C(20 summer)
 
-课程介绍：[https://github.com/qlhhahaha/CS61C-SU20](https://github.com/qlhhahaha/HashMap_for_CS106L)
+课程介绍：[https://github.com/qlhhahaha/CS61C-SU20](https://github.com/qlhhahaha/CS61C-SU20)
 
 {% endnote %}
 
@@ -70,27 +70,27 @@ plk++;
 
 3. **riscv简介**
 
-共32个寄存器，有些用于存编程中的变量，有些用于存临时变量
+    共32个寄存器，有些用于存编程中的变量，有些用于存临时变量
 
-![](https://s2.loli.net/2023/04/14/4O7d1hY6rEVZkRH.png)
+    ![](https://s2.loli.net/2023/04/14/4O7d1hY6rEVZkRH.png)
 
-**基本语法：**
+    **基本语法：**
 
-![](https://s2.loli.net/2023/04/14/TtZaqi3FPbB8Swk.png)
+    ![](https://s2.loli.net/2023/04/14/TtZaqi3FPbB8Swk.png)
 
-**数据传输指令：**
+    **数据传输指令：**
 
-- Load Word（lw）：读内存，即memory 到register
-- Store Word（sw）：反之
+    - Load Word（lw）：读内存，即memory 到register
+    - Store Word（sw）：反之
 
-![](https://s2.loli.net/2023/04/14/F6iyTX91EgADKzV.png)
+    ![](https://s2.loli.net/2023/04/14/F6iyTX91EgADKzV.png)
 
-**内存读写指令：**
+    **内存读写指令：**
 
-- lb：lb rd,imm(rs) —— 从内存 imm+rs 处读取8bit数据(符号拓展)到 rd 中
-- sb：sb rs2,imm(rs1) —— 将rs2中的8bit数据写入内存imm+rs1处
+    - lb：lb rd,imm(rs) —— 从内存 imm+rs 处读取8bit数据(符号拓展)到 rd 中
+    - sb：sb rs2,imm(rs1) —— 将rs2中的8bit数据写入内存imm+rs1处
 
-![](https://s2.loli.net/2023/04/14/WaCwBDVMZFRTnUS.png)
+    ![](https://s2.loli.net/2023/04/14/WaCwBDVMZFRTnUS.png)
 
 
 
@@ -105,7 +105,9 @@ plk++;
 
 {% endnote %}
 
-**控制指令：**
+
+
+​	**控制指令：**
 
 ![](https://s2.loli.net/2023/04/14/iqQIOF7pmfMrJR9.png)
 
@@ -115,9 +117,11 @@ plk++;
 - bge：branch greater than
 - jal（jump and link）：jal rd,label指令的下一条指令地址存入rd,跳转到label
 
-**比较指令：**
+​	**比较指令：**
 
 ![](https://s2.loli.net/2023/04/14/LP9hcsIFHp67Cm5.png)
+
+
 
 # Lecture7、RISC-V Functions
 
@@ -241,35 +245,37 @@ plk++;
 
    ![](https://s2.loli.net/2023/04/14/wWYksDqCdZnixHG.png)
 
-**cpu性能表现：**
+    
 
-![](https://s2.loli.net/2023/04/14/spvkcf2x5ITZz9Y.png)
+   **cpu性能表现：**
 
-（1）每个程序的指令数取决于：
+   ![](https://s2.loli.net/2023/04/14/spvkcf2x5ITZz9Y.png)
 
-- 程序算法的时间复杂度
-- 编程语言
-- 编译器
-- ISA
+    （1）每个程序的指令数取决于：
+   
+    - 程序算法的时间复杂度
+    - 编程语言
+    - 编译器
+    - ISA
 
-（2）每条指令要执行多少个cpu循环
+    （2）每条指令要执行多少个cpu循环
 
-- 指令复杂程度
+    - 指令复杂程度
 
-（3）每个cpu循环所耗费的时间
+    （3）每个cpu循环所耗费的时间
+   
+    - cpu设计
+    - 电子参数（晶体管尺寸、电压大小）
 
-- cpu设计
-- 电子参数（晶体管尺寸、电压大小）
+    **流水线技术：**
 
-**流水线技术：**
+    ![](https://s2.loli.net/2023/04/14/6DrgXQPSoFdTafs.png)
 
-![](https://s2.loli.net/2023/04/14/6DrgXQPSoFdTafs.png)
+    {% note warning%}
 
-{% note warning%}
-
-💡 PS. 流水线中，单个板块的耗时由短板决定
-
-{% endnote %}
+    💡 PS. 流水线中，单个板块的耗时由短板决定
+   
+    {% endnote %}
 
 
 
@@ -277,9 +283,8 @@ plk++;
 
 
 
-**riscv的5段流水线**
-
-![Untitled](https://s2.loli.net/2023/04/14/ROyINM486cYE37u.png)
+​	**riscv的5段流水线**
+![Untitled](https://s2.loli.net/2023/04/14/hRSsPQYO7Jpzu12.png)
 
 
 
@@ -388,9 +393,9 @@ plk++;
 
 ![](https://s2.loli.net/2023/04/14/jL2HfckoJCMQ5NX.png)
 
-​	cache用static RAM：更快（1ns），但功耗更高也更贵，通电时内容一直在
+​		cache用static RAM：更快（1ns），但功耗更高也更贵，通电时内容一直在
 
-​	主存用dynamic RAM：更便宜也更慢（70ns），定时更新内容
+​		主存用dynamic RAM：更便宜也更慢（70ns），定时更新内容
 
 
 
@@ -419,8 +424,8 @@ plk++;
     {% endnote %}
 
     直接映射优点：硬件设计简单、成本低 缺点：程序依次访问0x00、0x40、0x80（这3个地址的index一样的）时，首先访问第0个line，再访问0x40地址时依然会检索到第0个，然后发现数据缺失，于是从主存中加载0x0地址数据到第一个line，0x80亦是如此，所以此时cache的存在并没有对性能有啥提升，这种连续加载替换cache的现象叫做**cache颠簸（cache thrashing）**，针对这个问题我们引入多路组相连缓存
-
-
+    
+    
 
 4. **两路相连缓存（two-way set associative cache）**
 
@@ -453,8 +458,10 @@ plk++;
    常用的cache算法：
 
    - 随机替换
+
    - Least Recently Used（LRU）：最近一次访问时间最久远的那个block
-   - 
+
+     
 
 7. **多级cache之间的配合工作:**
 
@@ -486,19 +493,19 @@ plk++;
 
 ![](https://s2.loli.net/2023/04/14/5eh9B36T7NISdHL.png)
 
-​	AMAT=1+0.02*50=2 clock cycles=400ps
+​		AMAT=1+0.02*50=2 clock cycles=400ps
 
-​	——190ps clock：2 cycles=2*190=380
+​		——190ps clock：2 cycles=2*190=380
 
-​	——MP of 40 clock cycles：1+0.02*40=360
+​		——MP of 40 clock cycles：1+0.02*40=360
 
-​	**——MR of 0.015*50=350 （√）**
+​		**——MR of 0.015*50=350 （√）**
 
 
 
 # Lecture18-19、Operating Systems & Virtual Memory
 
-1. OS的最典型特征之一就是多任务，依赖于不同处理器的进程切换，但这个过程可能导致内存资源地址等发生变化
+1. OS的最典型特征之一就是**多任务**，依赖于不同处理器的进程切换，但这个过程可能导致内存资源地址等发生变化
 
    ![](https://s2.loli.net/2023/04/14/cwJQEKZl3WgzmU4.png)
 
@@ -548,6 +555,8 @@ plk++;
    ![](https://s2.loli.net/2023/04/14/uHglNXbaPYtRD8G.png)
 
    注意：虚拟内存在RAM没有对应是一件很正常的事哈（图中黄色的那些页），C盘里那个巨大的PageFile.Sys就是放在外存里的虚拟内存
+
+   
 
 5. **地址转换**
 
@@ -631,6 +640,8 @@ plk++;
 
    ![](https://s2.loli.net/2023/04/14/zlKvwu2JBD8m4aL.png)
 
+   
+
 3. **SIMD(Single Instruction Multiple Data)架构**
 
    许多基本数据类型为8bit，而现在处理器是32/64bit，若一次只用64位中的低八位处理数据显然很浪费，但若将64位寄存器拆成8个8位寄存器就能同时完成8个操作，计算效率提升8倍，这就是SIMD的初衷，具体表现为向量运算
@@ -662,6 +673,8 @@ plk++;
    }
    ```
 
+   
+
 4. **循环展开**
 
    ![](https://s2.loli.net/2023/04/14/wW4sJ17DUOF3xtM.png)
@@ -675,6 +688,8 @@ plk++;
    展开后：汇编代码重排，可利用SIMD机制
 
 ![](https://s2.loli.net/2023/04/14/se4LKvalYpqyCRH.png)
+
+
 
 # Lecture22、Thread-level Parallelism
 
@@ -805,8 +820,7 @@ plk++;
 
 {% note warning%}
 
-<aside> 💡 PS.
-
+💡 PS.
 
 1. 并不是一定得有多核才能多线程，单核同样可以，因为**线程是OS层面的实现，与有多少个核心无关**，CPU在执行机器指令时也意识不到执行的机器指令属于哪个线程
 2. 上述理论也说明了为啥OS要给每个线程分配一个栈，因为每个线程的执行流都需要保存自己正在执行的函数的数据（参数、局部变量、返回地址等）
