@@ -17,8 +17,8 @@ url: https://qlhhahaha.github.io/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+    trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+    trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -35,35 +35,36 @@ new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
-  exclude: ''
+    enable: true # Open external links in new tab
+    field: site # Apply to the whole site
+    exclude: ''
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
-  auto_detect: true
-  tab_replace: ''
-  wrap: true
-  hljs: false
+    enable: true
+    line_number: true
+    auto_detect: true
+    tab_replace: ''
+    wrap: true
+    hljs: false
 prismjs:
-  enable: false
-  preprocess: true
-  line_number: true
-  tab_replace: ''
+    enable: false
+    preprocess: true
+    line_number: true
+    tab_replace: ''
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
-  per_page: 10
-  order_by: -date
+    path: ''
+    per_page: 10
+    order_by: -date
+
 
 # Category & Tag
 default_category: uncategorized
@@ -112,9 +113,7 @@ deploy:
 favicon: /img/favicon.jpg
 
 
-banner_img: /img/background.jpg # 对应存放在 /source/img/bg/example.jpg
-banner_img_height: 90
-banner_mask_alpha: 0.8
+
 
 navbar:
     blog_title: 钱力晖的小站
@@ -146,6 +145,9 @@ index:
         method: "GET"
         headers: {}
         keys: ["hitokoto"]
+    banner_img: /img/background.jpg # 对应存放在 /source/img/bg/example.jpg
+    banner_img_height: 90
+    banner_mask_alpha: 0.8
 
 
 #关于页
@@ -196,6 +198,24 @@ valine:
     emojiMaps:
     enableQQ: false
 
+# Waline
+# 从 Valine 衍生而来，额外增加了服务端和多种功能
+# Derived from Valine, with self-hosted service and new features
+# See: https://waline.js.org/
+waline:
+    serverURL: 'https://waline-test-woad-six.vercel.app/'
+    placeholder: 你想对钱力晖说什么捏?(填qq邮箱可自动拉取头像，不登录也可以评论，支持表情包和markdown语法)
+    path: window.location.pathname
+    avatar: retro
+    meta: ['nick', 'mail', 'link']
+    pageSize: 10
+    lang: zh-CN
+    highlight: true
+    avatarCDN: ''
+    avatarForce: false
+    requiredFields: []
+    emoji: [https://unpkg.com/@waline/emojis@1.1.0/tieba]
+
 post:
     math:
         enable: true
@@ -218,5 +238,6 @@ post:
         enable: true
         # 指定的插件，需要同时设置对应插件的必要参数
         # The specified plugin needs to set the necessary parameters at the same time
-        # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus
-        type: valine
+        # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis
+        type: waline
+    

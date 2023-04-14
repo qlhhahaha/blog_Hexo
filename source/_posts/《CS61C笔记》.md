@@ -3,6 +3,7 @@ title: 《CS61C笔记》
 date: 2023-04-14
 tags: [体系结构, riscv, 操作系统]
 categories: 核心科技看美帝
+index_img: /img/CS61C.png
 ---
 
 
