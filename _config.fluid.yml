@@ -244,16 +244,16 @@ post:
         # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis
         type: waline
     
-page:
+message:
     banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg
 
 archive:
     banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg
 
-categories:
+category:
     banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg
 
-tags:
+tag:
     banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg
 
 links:
