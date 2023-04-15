@@ -147,7 +147,7 @@ index:
         keys: ["hitokoto"]
     banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg
     banner_img_height: 100
-    banner_mask_alpha: 0.1
+    banner_mask_alpha: 0.4
 
 
 #关于页
@@ -244,7 +244,7 @@ post:
         # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis
         type: waline
     
-message:
+page:
     banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg
 
 archive:
