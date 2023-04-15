@@ -147,11 +147,12 @@ index:
         keys: ["hitokoto"]
     banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg
     banner_img_height: 100
-    banner_mask_alpha: 0.5
+    banner_mask_alpha: 0.1
 
 
 #关于页
 about:
+    banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg
     avatar: /img/avatar.jpg
     name: "钱力晖"
     intro: "很高兴认识你！"
@@ -245,3 +246,15 @@ post:
     
 message:
     banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg
+
+archive:
+    banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg
+
+categories:
+    banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg
+
+tags:
+    banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg
+
+links:
+    banner_img: https://s2.loli.net/2023/04/14/PZzfdpVG8gKBeJk.jpg   
