@@ -72,11 +72,16 @@ categories: 科研只为把业毕
 
 3. **仿真代码**
 	$$
-	\left[\begin{matrix}\dot{x}_1\\\dot{x}_2\end{matrix}\right]=\left[\begin{matrix}0&1\\-2&3\end{matrix}\right]\left[\begin{matrix}x_1\\x_2\end{matrix}\right]+\left[\begin{matrix}0\\1\end{matrix}\right]u\\
+	\left[\begin{matrix}\dot{x}_1 \\ \dot{x}_2\end{matrix}\right]=\left[\begin{matrix}0&1 \\ -2&3\end{matrix}\right]\left[\begin{matrix}x_1 \\ x_2\end{matrix}\right]+\left[\begin{matrix}0 \\ 1\end{matrix}\right]u\\
+	$$
+	$$
 	V=x^TPx\\
 	\begin{aligned}\partial V/\partial x(Ax+BKx)=-x^{T}Qx\end{aligned}\\
 	P=\left[\begin{array}{cc}1&\frac{1}{4}\\\frac{1}{4}&1\end{array}\right],\quad Q=\left[\begin{array}{cc}\frac{1}{2}&\frac{1}{4}\\\frac{1}{4}&\frac{3}{2}\end{array}\right]\\
 	$$
+	
+	
+	
 	把测量误差带入表达式，我们有：
 	$$
 	\frac{\partial V}{\partial x}\Big(Ax+BKx+BKe\Big)\leq-a|x|^2+b|e\|x|
@@ -86,7 +91,7 @@ categories: 科研只为把业毕
 	a=\lambda_m(Q)>0.44\quad b=|K^TB^TP+PBK|=8
 	$$
 	$\lambda_m(Q)$表示 Q 的最小特征值，$\sigma b$应比0.44更小，算出来$\sigma$的上界约为0.05，我们可以取$\sigma'=0.03$
-
+	
 	```matlab
 	% Tabuada, P. (2007). 
 	% Event-triggered real-time scheduling of stabilizing control tasks.
@@ -170,11 +175,11 @@ categories: 科研只为把业毕
 	fprintf('the system has been triggered %d times in all\n', trigger_count);
 	
 	```
-
+	
 	仿真结果：
-
+	
 	![image-20230720231406017](https://s2.loli.net/2023/07/20/6xms4BwDbjktp5T.png)
-
+	
 	![image-20230720231348243](https://s2.loli.net/2023/07/20/q5raNL71SfctwA2.png)
 
 
