@@ -79,14 +79,18 @@ categories: 科研只为把业毕
 	1\end{matrix}\right]u
 	$$
 	$$
-	V=x^TPx\\\\
-	\begin{aligned}\partial V/\partial x(Ax+BKx)=-x^{T}Qx\end{aligned}\\\\
+	V=x^TPx
+	$$
+	
+	$$
+	\begin{aligned}\partial V/\partial x(Ax+BKx)=-x^{T}Qx\end{aligned}
+	$$
+	
+	$$
 	P=\left[\begin{array}{cc}1&\frac{1}{4}\\\\
 	\frac{1}{4}&1\end{array}\right],\quad Q=\left[\begin{array}{cc}\frac{1}{2}&\frac{1}{4}\\\\
 	\frac{1}{4}&\frac{3}{2}\end{array}\right]
 	$$
-	
-	
 	
 	把测量误差带入表达式，我们有：
 	$$
