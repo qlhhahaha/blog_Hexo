@@ -78,6 +78,7 @@ categories: 科研只为把业毕
 	x_2\end{matrix}\right]+\left[\begin{matrix}0\\\\
 	1\end{matrix}\right]u
 	$$
+	
 	$$
 	V=x^TPx
 	$$
