@@ -72,12 +72,18 @@ categories: 科研只为把业毕
 
 3. **仿真代码**
 	$$
-	\left[\begin{matrix}\dot{x}_1\\\\dot{x}_2\end{matrix}\right]=\left[\begin{matrix}0&1\\\\-2&3\end{matrix}\right]\left[\begin{matrix}x_1\\\\x_2\end{matrix}\right]+\left[\begin{matrix}0\\\\1\end{matrix}\right]u
+	\left[\begin{matrix}\dot{x}_1\\\\
+	\dot{x}_2\end{matrix}\right]=\left[\begin{matrix}0&1\\\\
+	-2&3\end{matrix}\right]\left[\begin{matrix}x_1\\\\
+	x_2\end{matrix}\right]+\left[\begin{matrix}0\\\\
+	1\end{matrix}\right]u
 	$$
 	$$
 	V=x^TPx\\\\
 	\begin{aligned}\partial V/\partial x(Ax+BKx)=-x^{T}Qx\end{aligned}\\\\
-	P=\left[\begin{array}{cc}1&\frac{1}{4}\\\\frac{1}{4}&1\end{array}\right],\quad Q=\left[\begin{array}{cc}\frac{1}{2}&\frac{1}{4}\\\\frac{1}{4}&\frac{3}{2}\end{array}\right]
+	P=\left[\begin{array}{cc}1&\frac{1}{4}\\\\
+	\frac{1}{4}&1\end{array}\right],\quad Q=\left[\begin{array}{cc}\frac{1}{2}&\frac{1}{4}\\\\
+	\frac{1}{4}&\frac{3}{2}\end{array}\right]
 	$$
 	
 	
