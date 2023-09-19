@@ -51,7 +51,7 @@ categories: 自己事情靠自己
 
 	以1维卷积$F(2, 3)$为例，输入信号$d=[d_0,d_1,d_2,d_3]^T$，卷积核$g=[g_0,g_1,g_2]^T$，那么卷积可以写成下列矩阵乘法形式：
 	$$
-	F(2,3)=\begin{bmatrix}d_0&d_1&d_2\\d_1&d_2&d_3\end{bmatrix}\begin{bmatrix}g_0\\g_1\\g_2\end{bmatrix}=\begin{bmatrix}r_0\\r_1\end{bmatrix}
+	F(2,3)=\begin{bmatrix}d_0&d_1&d_2\\\\d_1&d_2&d_3\end{bmatrix}\begin{bmatrix}g_0\\\\g_1\\\\g_2\end{bmatrix}=\begin{bmatrix}r_0\\\\r_1\end{bmatrix}
 	$$
 	如果这个计算过程使用普通的矩阵乘法，一共需要 **6 次乘法 + 4次加法**：
 	$$
