@@ -1,15 +1,17 @@
-title: 《南京大学操作系统笔记》
+---
+title: 南京大学操作系统笔记
 date: 2023-11-5
 tags: [操作系统, X86]
 categories: 核心科技看美帝
 index_img: /img/jyy.png
+---
 
 
 
 {% note success%}
 课程来源：NJU-OS(22 spring)
 
-课程主页：[[操作系统：设计与实现 (2022 春季学期)](https://jyywiki.cn/OS/2022/index.html)](https://github.com/qlhhahaha/CS61C-SU20)
+课程主页：[操作系统：设计与实现 (2022 春季学期)](https://github.com/qlhhahaha/CS61C-SU20)
 
 课程视频：https://space.bilibili.com/202224425/channel/collectiondetail?sid=192498
 
@@ -92,11 +94,11 @@ index_img: /img/jyy.png
 
 2. **并发的基本单位：线程**
 
-	各个线程有自己的PC、寄存器、栈空间，但全局的静态空间是共享的
+  各个线程有自己的PC、寄存器、栈空间，但全局的静态空间是共享的
 
-	![](https://s2.loli.net/2023/11/05/eOM5gRbPGw1WSup.png)
+  ![](https://s2.loli.net/2023/11/05/eOM5gRbPGw1WSup.png)
 
-	3. **并发牺牲了什么？**
+3. **并发牺牲了什么？**
 
 	- **原子性**
 
