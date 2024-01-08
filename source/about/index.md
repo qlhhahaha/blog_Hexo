@@ -17,11 +17,11 @@ layout: about
 
 - 学校： 华中科技大学 Huazhong University of Science and Technology(HUST)
 
-- 研究方向： 分布式优化，多智能体协同，自动驾驶规划
+- 研究方向： 多智能体系统中的分布式优化问题（Distributed Optimization for Multi-Agent Systems）
 
-- 邮箱： u201914690 AT hust DOT edu DOT cn
+- 邮箱： lihui_qianl AT hust DOT edu DOT cn
 
-  ​			1157577993 AT qq DOT com
+  ​			lihui_qianl AT qq DOT com
 
 - 微信： qlhhahaha
 
